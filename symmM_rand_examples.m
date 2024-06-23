@@ -22,7 +22,7 @@ close all
 rng(5)
 
 test_matrix = 1; % Choose me
-test_matrix = 2; % Or choose me
+%test_matrix = 2; % Or choose me
 
 
 save_fig = ~true;
@@ -37,7 +37,7 @@ maxiter = 300; % Number of iterations
 % Uncomment the below maxiter lines to re-produce the rk-decomposition
 % plots from the supplementary materials.
 save_rk_decomposition_fig = ~true; % Save decomposition of of rk into eigenvectors of M?
-% maxiter = 1;
+%maxiter = 1;
 % maxiter = 61;
 % maxiter = 121;
 % maxiter = 181;

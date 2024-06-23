@@ -2,7 +2,7 @@
 % NOTE: r is the residual vector for the second last iterate, and similarly 
 % rnorms(end) = ||r|| 
 % rtol is a relative residual halting tolerance and is optional
-function [rnorms, r] = PI(q, u0, maxiter, rtol)
+function [rnorms, r, u] = PI(q, u0, maxiter, rtol)
     rnorms = [];
     u_current = u0;
     for iter = 1:maxiter
@@ -20,6 +20,6 @@ function [rnorms, r] = PI(q, u0, maxiter, rtol)
             end
         end
     end
-
+    u = u_current;
     r = r_current;
 end

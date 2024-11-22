@@ -60,7 +60,7 @@ figure
 contourf(M1, M2, rho_worst_PI, 10)
 xlabel('$m_1$')
 ylabel('$m_2$')
-title('$\varrho^{\mathrm{worst}}_{\mathrm{PI}}$')
+title('$\varrho^{\mathrm{worst}}_{\mathrm{FP}}$')
 caxis manual
 caxis([0 1]);
 colorbar
@@ -82,7 +82,7 @@ hold on
 plot(m1, -m2, 'k--', 'LineWidth', 3)
 xlabel('$m_1$')
 ylabel('$m_2$')
-title('$\varrho^{\mathrm{worst}}_{\mathrm{AA}} / \varrho^{\mathrm{worst}}_{\mathrm{PI}}$')
+title('$\varrho^{\mathrm{worst}}_{\mathrm{AA}} / \varrho^{\mathrm{worst}}_{\mathrm{FP}}$')
 caxis manual
 caxis([0 1]);
 colorbar

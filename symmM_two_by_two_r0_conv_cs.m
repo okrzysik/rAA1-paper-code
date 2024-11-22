@@ -35,24 +35,23 @@ for kk = 1:num_examples
         m2 = round(randn(1), 1, 'significant');
     end
 
-
     semilogx(epsilon, conv_fac(m1, m2, epsilon), ...
         styles{mod(kk, length(styles))+1}, ...
-        'DisplayName', sprintf('$(m_1, m_2) = (%.1f,%.1f)$', m1, m2), ...
-        'LineWidth', 1)
+        'DisplayName', sprintf('$(%.1f,%.1f)$', m1, m2), ...
+        'LineWidth', 2)
         
     hold on
 end
 
 box on
 lh = legend();
-%lh.set('Location', 'NorthOutside')
-lh.set('Location', 'EastOutside')
+lh.set('Location', 'NorthOutside')
+%lh.set('Location', 'EastOutside')
 %lh.NumColumns = num_examples/3;
-lh.NumColumns = 1;
+lh.NumColumns = num_examples;
 lh.Orientation = 'horizontal';
 xlabel('$\varepsilon$')
-ylabel('$\varrho(\mathbf{r}_0)$')
+ylabel('$\varrho_{\mathrm{AA}}(\mathbf{r}_0)$')
 xlim([-0.25, epsilon(end)])
 
 function rho = conv_fac(m1, m2, eps)

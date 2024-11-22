@@ -10,7 +10,7 @@ clear all
 close all
 
 %%%%%%%%%%%%%%%%%
-save_fig = true;
+save_fig = ~true;
 %%%%%%%%%%%%%%%%%
 
 
@@ -34,7 +34,7 @@ hold on
 plot(m_max_PI, rho_worst_PI, '-<', ...
     'LineWidth', 1, ...
     'Color', mycols{6}, ...
-    'DisplayName', 'PI')
+    'DisplayName', 'FP')
 xlabel('$\rho(M)$')
 ylabel('$\varrho^{\mathrm{worst}}$')
 axis tight
